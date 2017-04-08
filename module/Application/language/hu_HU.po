@@ -1,0 +1,262 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-07 19:16+0200\n"
+"PO-Revision-Date: 2017-04-07 19:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 1.8.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: Application/src/Form/MemoryForm.php:79
+#: Application/src/Form/ProcessorForm.php:70
+msgid "Value is required and can't be empty"
+msgstr "Ez a mező nem lehet üres"
+
+#: Application/src/Form/MemoryForm.php:89
+msgid "Invalid type given. String expected"
+msgstr "Nem megfelelő típus. Karakterlánc szükséges"
+
+#: Application/src/Form/MemoryForm.php:90
+msgid "The input is less than %min% characters long"
+msgstr "Ez a mező nem tartalmazhat %min% karakternél kevesebbet"
+
+#: Application/src/Form/MemoryForm.php:91
+msgid "The input is more than %max% characters long"
+msgstr "Ez a mező nem tartalmazhat %min% karakternél többet"
+
+#: Application/view/application/computer/add.phtml:2
+#: Application/view/application/computer/index.phtml:8
+msgid "Add new computer"
+msgstr "Új számítógép hozzáadása"
+
+#: Application/view/application/computer/add.phtml:5
+#: Application/view/application/computer/edit.phtml:5
+#: Application/view/application/computer/edit.phtml:42
+#: Application/view/application/computer/edit.phtml:74
+#: Application/view/application/computer/index.phtml:12
+#: Application/view/application/computer/memory/add.phtml:12
+#: Application/view/application/computer/processor/set.phtml:12
+#: Application/view/application/memory/add.phtml:5
+#: Application/view/application/memory/edit.phtml:5
+#: Application/view/application/memory/index.phtml:13
+#: Application/view/application/processor/add.phtml:5
+#: Application/view/application/processor/edit.phtml:5
+#: Application/view/application/processor/index.phtml:12
+msgid "Name"
+msgstr "Név"
+
+#: Application/view/application/computer/add.phtml:6
+#: Application/view/application/computer/edit.phtml:6
+#: Application/view/application/computer/edit.phtml:43
+#: Application/view/application/computer/edit.phtml:75
+#: Application/view/application/computer/index.phtml:13
+#: Application/view/application/computer/memory/add.phtml:13
+#: Application/view/application/computer/processor/set.phtml:13
+#: Application/view/application/memory/add.phtml:6
+#: Application/view/application/memory/edit.phtml:6
+#: Application/view/application/memory/index.phtml:14
+#: Application/view/application/processor/add.phtml:6
+#: Application/view/application/processor/edit.phtml:6
+#: Application/view/application/processor/index.phtml:13
+msgid "Description"
+msgstr "Leírás"
+
+#: Application/view/application/computer/add.phtml:28
+#: Application/view/application/memory/add.phtml:28
+#: Application/view/application/processor/add.phtml:23
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: Application/view/application/computer/add.phtml:29
+#: Application/view/application/computer/edit.phtml:29
+msgid "Return to computers"
+msgstr "Vissza a számítógépekhez"
+
+#: Application/view/application/computer/delete.phtml:2
+msgid "Remove computer"
+msgstr "Számítógép eltávolítása"
+
+#: Application/view/application/computer/delete.phtml:7
+#, php-format
+msgid "Are you sure that you want to remove computer \"%s\"?"
+msgstr "Biztos, hogy törölni akarod a(z) \"%s\" nevű számítógépet?"
+
+#: Application/view/application/computer/delete.phtml:9
+#: Application/view/application/computer/memory/delete.phtml:9
+#: Application/view/application/computer/processor/delete.phtml:9
+#: Application/view/application/memory/delete.phtml:10
+#: Application/view/application/processor/delete.phtml:10
+msgid "Yes"
+msgstr "Igen"
+
+#: Application/view/application/computer/delete.phtml:10
+#: Application/view/application/computer/memory/add.phtml:25
+#: Application/view/application/computer/memory/delete.phtml:10
+#: Application/view/application/computer/processor/delete.phtml:10
+#: Application/view/application/computer/processor/set.phtml:29
+#: Application/view/application/memory/delete.phtml:11
+#: Application/view/application/processor/delete.phtml:11
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: Application/view/application/computer/edit.phtml:2
+msgid "Edit computer"
+msgstr "Számítógép szerkesztése"
+
+#: Application/view/application/computer/edit.phtml:28
+#: Application/view/application/memory/edit.phtml:28
+#: Application/view/application/processor/edit.phtml:23
+msgid "Update"
+msgstr "Módosítás"
+
+#: Application/view/application/computer/edit.phtml:32
+msgid "The processor of this computer"
+msgstr "A számítógép processzora"
+
+#: Application/view/application/computer/edit.phtml:38
+msgid "Add processor"
+msgstr "Processzor hozzáadása"
+
+#: Application/view/application/computer/edit.phtml:55
+msgid "Change"
+msgstr "Módosítás"
+
+#: Application/view/application/computer/edit.phtml:60
+#: Application/view/application/computer/edit.phtml:88
+#: Application/view/application/computer/index.phtml:30
+#: Application/view/application/memory/index.phtml:32
+#: Application/view/application/processor/index.phtml:30
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: Application/view/application/computer/edit.phtml:65
+msgid "The memories of this computer"
+msgstr "A számítógép memóriái"
+
+#: Application/view/application/computer/edit.phtml:70
+#: Application/view/application/computer/memory/add.phtml:2
+msgid "Add memory"
+msgstr "Memória hozzáadása"
+
+#: Application/view/application/computer/edit.phtml:73
+#: Application/view/application/memory/index.phtml:12
+msgid "DIMM"
+msgstr "DIMM"
+
+#: Application/view/application/computer/index.phtml:2
+#: Application/view/layout/layout.phtml:49
+msgid "Computers"
+msgstr "Számítógépek"
+
+#: Application/view/application/computer/index.phtml:25
+#: Application/view/application/memory/index.phtml:27
+#: Application/view/application/processor/index.phtml:25
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: Application/view/application/computer/memory/add.phtml:7
+#, php-format
+msgid "Choose a memory for \"%s\"!"
+msgstr "Válassz egy memóriát a(z) \"%s\" számára!"
+
+#: Application/view/application/computer/memory/add.phtml:24
+#: Application/view/application/computer/processor/set.phtml:28
+msgid "Ok"
+msgstr "Ok"
+
+#: Application/view/application/computer/memory/delete.phtml:2
+#: Application/view/application/computer/processor/delete.phtml:2
+#: Application/view/application/processor/delete.phtml:2
+msgid "Remove processor"
+msgstr "Processzor törlése"
+
+#: Application/view/application/computer/memory/delete.phtml:7
+#: Application/view/application/computer/processor/delete.phtml:7
+msgid "Are you sure that you want to remove the processor of this computer?"
+msgstr "Biztos, hogy törölni akarod a processzort ebből a számítógépből?"
+
+#: Application/view/application/computer/processor/set.phtml:2
+msgid "Set processor"
+msgstr "Processzor kiválasztása"
+
+#: Application/view/application/computer/processor/set.phtml:7
+#, php-format
+msgid "Choose a processor for \"%s\"!"
+msgstr "Válassz egy processzort a(z) \"%s\" számára!"
+
+#: Application/view/application/memory/add.phtml:2
+#: Application/view/application/memory/index.phtml:8
+msgid "Add new memory"
+msgstr "Új memória hozzáadása"
+
+#: Application/view/application/memory/add.phtml:29
+#: Application/view/application/memory/edit.phtml:29
+msgid "Return to memories"
+msgstr "Vissza a memóriákhoz"
+
+#: Application/view/application/memory/delete.phtml:2
+msgid "Remove memory"
+msgstr "Memória eltávolítása"
+
+#: Application/view/application/memory/delete.phtml:7
+#, php-format
+msgid "Are you sure that you want to remove memory \"%s\"?"
+msgstr "Biztos, hogy törölni akarod a(z) \"%s\" nevű memóriát?"
+
+#: Application/view/application/memory/edit.phtml:2
+msgid "Edit memory"
+msgstr "Memória szerkesztése"
+
+#: Application/view/application/memory/index.phtml:2
+#: Application/view/layout/layout.phtml:44
+msgid "Memories"
+msgstr "Memóriák"
+
+#: Application/view/application/processor/add.phtml:2
+#: Application/view/application/processor/index.phtml:8
+msgid "Add new processor"
+msgstr "Új processzor hozzáadása"
+
+#: Application/view/application/processor/add.phtml:24
+#: Application/view/application/processor/edit.phtml:24
+msgid "Return to processors"
+msgstr "Vissza a processzorokhoz"
+
+#: Application/view/application/processor/delete.phtml:7
+#, php-format
+msgid "Are you sure that you want to remove processor \"%s\"?"
+msgstr "Biztos, hogy törölni akarod a(z) \"%s\" nevű processzort?"
+
+#: Application/view/application/processor/edit.phtml:2
+msgid "Edit processor"
+msgstr "Processzor szerkesztése"
+
+#: Application/view/application/processor/index.phtml:2
+#: Application/view/layout/layout.phtml:39
+msgid "Processors"
+msgstr "Processzorok"
+
+#: Application/view/layout/layout.phtml:35
+msgid "Home"
+msgstr "Főoldal"
+
+#: Application/view/layout/layout.phtml:66
+msgid "Point to me!"
+msgstr "Mutass rám!"
+
+#: Application/view/layout/layout.phtml:73
+msgid "The date is:"
+msgstr "A dátum:"
+
+#: Application/view/layout/layout.phtml:82
+msgid "All rights reserved."
+msgstr ""

@@ -1,0 +1,108 @@
+a {
+    background: transparent;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px #ccc;
+    border-bottom: 1px dotted;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+    text-shadow: 0 1px 2px #bbb;
+    border-bottom: 1px solid;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.5em;
+    background-color: transparent;
+}
+
+th {
+    background-color: #eef0f3    
+}
+
+th, td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 6px;
+    border-top: 1px solid #dddddd;
+}
+
+.form-group label,
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.form-group button {
+    display: block;
+}
+
+.form-group.inline label,
+.form-group.inline iput,
+.form-group.inline select,
+.form-group.inline button {
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+}
+
+.form-group button {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-right: 0.2em;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+}
+
+input.icon12,
+button.icon12 {
+    background-position: 10px center;
+    padding-left: 23px;
+    padding-right: 10px;
+    height: 20px;
+    line-height: 18px;
+    border: 1px solid #999;
+    box-shadow: 0px 0px 3px #99b inset;
+    background-color: #f3f5f9;
+    border-radius: 5px;
+}
+
+input.icon12:hover,
+button.icon12:hover {
+    background-color: #eceef1;
+}
+
+input.icon12:active,
+button.icon12:active {
+    box-shadow: 2px 1px 3px #99b inset;
+}

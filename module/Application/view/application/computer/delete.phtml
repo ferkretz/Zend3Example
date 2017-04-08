@@ -1,0 +1,12 @@
+<?php
+$headTitle = $this->translate('Remove computer');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 computer" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <p><?= sprintf($this->translate('Are you sure that you want to remove computer "%s"?'), $computer->getName()) ?></p>
+    <form method="post" name="computer-form" id="computer-form">
+        <button type="submit" name="delete" id="delete-yes" class="icon12 ok" value="OK"><?= $this->translate('Yes') ?></button>
+        <button type="submit" name="delete" id="delete-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Cancel') ?></button>
+    </form>
+</div>

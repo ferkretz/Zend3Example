@@ -1,0 +1,92 @@
+#clock {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#clockface {
+    display: block;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    background-image: url(../img/clockface.png);
+    background-position: 0px 0px;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+#clockimage {
+    position: absolute;
+    display: block;
+    opacity: 0.8;
+    margin: 16px;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    background-image: url(../img/clockimage.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+#clockhands {
+    position: absolute;
+    display: block;
+    opacity: 0.9;
+    width: 100px;
+    height: 100px;
+    z-index: 500;
+}
+
+#clock.opened > #clockface #clockimage,
+#clock.opened > #hint {
+    display: none;
+}
+
+#clock.opened > #clockface { background-position: -100px 0px; }
+
+#calendar {
+    margin-top: -14px;
+    margin-left: -18px;
+    display: none;
+    width: 100%;
+}
+
+#calendar.opened {
+    display: block;
+    float: left;
+}
+
+#calendarimage {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/clockimage.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+#calendarcloud {
+    position: absolute;
+    display: block;
+    margin-top: 46px;
+    margin-left: 54px;
+    width: 128px;
+    height: 74px;
+    max-width: 128px;
+    background-image: url(../img/cloudimage.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+#calendarcloud div {
+    color: #0000ff;
+    text-align: center;
+    padding-top: 18px;
+    padding-left: 25px;
+}

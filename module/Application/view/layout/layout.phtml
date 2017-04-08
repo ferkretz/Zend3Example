@@ -1,0 +1,86 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?=
+                $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <?=
+                $this->headLink(array('rel' => 'shortcut icon', 'href' => $this->basePath() . '/img/clockimage.png'))
+                ->prependStylesheet($this->basePath() . '/css/style.css')
+                ->prependStylesheet($this->basePath() . '/css/block.css')
+                ->prependStylesheet($this->basePath() . '/css/element.css')
+                ->prependStylesheet($this->basePath() . '/css/navbar.css')
+                ->prependStylesheet($this->basePath() . '/css/clock.css')
+        ?>
+
+        <?=
+                $this->headScript()
+                ->prependFile($this->basePath() . '/js/clock.js')
+                ->prependFile($this->basePath('js/bootstrap.min.js'))
+                ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+        ?>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="<?= $this->url('home') ?>"><?= $this->translate('Home') ?></a>
+                        <ul>
+                            <li>
+                                <a href="<?= $this->url('home') . 'processor' ?>">
+                                    <?= $this->translate('Processors') ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->url('home') . 'memory' ?>">
+                                    <?= $this->translate('Memories') ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->url('home') . 'computer' ?>">
+                                    <?= $this->translate('Computers') ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container topborder">
+            <aside>
+                <center>
+                    <div id="clock">
+                        <div id="clockface">
+                            <canvas id="clockhands" width="100" height="100"></canvas>
+                            <div id="clockimage"></div>
+                        </div>
+                        <div id="hint"><?= $this->translate('Point to me!') ?></div>
+                    </div>
+                </center>
+                <div id="calendar">
+                    <div id="calendarimage"></div>
+                    <div id="calendarcloud">
+                        <div>
+                            <?= $this->translate('The date is:') ?>
+                            <br/><?= date("Y. m. d") ?>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <article><?= $this->content; ?></article>
+
+            <center><footer>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. <?= $this->translate('All rights reserved.') ?></footer></center>
+        </div>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<?php
+$headTitle = $this->translate('Computers');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 computer" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <a class="icon12 new" href="<?= $this->url('computer', ['action' => 'add']); ?>">
+        <?= $this->translate('Add new computer') ?>
+    </a>
+    <table>
+        <tr>
+            <th><?= $this->translate('Name') ?></th>
+            <th><?= $this->translate('Description') ?></th>
+            <th>&nbsp;</th>
+        </tr>
+        <?php foreach ($computers as $computer) : ?>
+            <tr>
+                <td><?= $this->escapeHtml($computer->getName()) ?></td>
+                <td><?= $this->escapeHtml($computer->getDescription()) ?></td>
+                <td>
+                    <a class="icon12 edit cell" href="<?=
+                    $this->url(
+                            'computer', ['action' => 'edit', 'id' => $computer->getId()]
+                    )
+                    ?>"><?= $this->translate('Edit') ?></a>
+                    <a class="icon12 remove cell" href="<?=
+                    $this->url(
+                            'computer', ['action' => 'delete', 'id' => $computer->getId()]
+                    )
+                    ?>"><?= $this->translate('Remove') ?></a>
+                </td>
+            </tr>
+<?php endforeach; ?>
+    </table>
+</div>

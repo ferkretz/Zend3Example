@@ -1,0 +1,37 @@
+<?php
+$headTitle = $this->translate('Memories');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 memory" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <a class="icon12 new" href="<?= $this->url('memory', ['action' => 'add']); ?>">
+        <?= $this->translate('Add new memory') ?>
+    </a>
+    <table>
+        <tr>
+            <th><?= $this->translate('DIMM') ?></th>
+            <th><?= $this->translate('Name') ?></th>
+            <th><?= $this->translate('Description') ?></th>
+            <th>&nbsp;</th>
+        </tr>
+        <?php foreach ($memories as $memory) : ?>
+            <tr>
+                <td><?= $this->escapeHtml($memory->getDIMM()) ?></td>
+                <td><?= $this->escapeHtml($memory->getName()) ?></td>
+                <td><?= $this->escapeHtml($memory->getDescription()) ?></td>
+                <td>
+                    <a class="icon12 edit cell" href="<?=
+                    $this->url(
+                            'memory', ['action' => 'edit', 'id' => $memory->getId()]
+                    )
+                    ?>"><?= $this->translate('Edit') ?></a>
+                    <a class="icon12 remove cell" href="<?=
+                    $this->url(
+                            'memory', ['action' => 'delete', 'id' => $memory->getId()]
+                    )
+                    ?>"><?= $this->translate('Remove') ?></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

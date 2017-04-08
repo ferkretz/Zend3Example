@@ -1,0 +1,27 @@
+<?php
+$headTitle = $this->translate('Add new processor');
+$this->headTitle($headTitle);
+$form = $this->form;
+$form->get('name')->setLabel($this->translate('Name'));
+$form->get('description')->setLabel($this->translate('Description'));
+$form->prepare();
+?>
+<center><div class="title icon48 processor" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <?= $this->form()->openTag($form) ?>
+    <div class="form-group w50">
+        <?= $this->formLabel($form->get('name')); ?>
+        <?= $this->formElement($form->get('name')); ?>
+        <?= $this->formElementErrors($form->get('name')); ?>
+    </div>
+    <div class="form-group w50">
+        <?= $this->formLabel($form->get('description')); ?>
+        <?= $this->formElement($form->get('description')); ?>
+        <?= $this->formElementErrors($form->get('description')); ?>
+    </div>
+    <div class="form-group inline">
+        <button type="submit" name="add" id="add-ok" class="icon12 ok" value="Ok"><?= $this->translate('Add') ?></button>
+        <button type="submit" name="add" id="add-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Return to processors') ?></button>
+    </div>
+    <?= $this->form()->closeTag(); ?>
+</div>

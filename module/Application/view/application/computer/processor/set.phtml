@@ -1,0 +1,32 @@
+<?php
+$headTitle = $this->translate('Set processor');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 computer" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <p><?= sprintf($this->translate('Choose a processor for "%s"!'), $computer->getName()) ?></p>
+    <form method="post" name="computer-form" id="computer-form">
+        <table>
+            <tr>
+                <th>&nbsp;</th>
+                <th><?= $this->translate('Name') ?></th>
+                <th><?= $this->translate('Description') ?></th>
+            </tr>
+            <?php foreach ($processors as $processor) : ?>
+                <tr>
+                    <td><input type="radio" name="processor-id" value="<?= $processor->getId() ?>"<?php
+                        if (($computer->getProcessor() != null) && ($processor->getId() == $computer->getProcessor()->getId())) {
+                            echo ' checked';
+                        }
+                        ?>> </td>
+                    <td><?= $this->escapeHtml($processor->getName()) ?></td>
+                    <td><?= $this->escapeHtml($processor->getDescription()) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+        <div class="form-group inline">
+            <button type="submit" name="set" id="set-ok" class="icon12 ok" value="Ok"><?= $this->translate('Ok') ?></button>
+            <button type="submit" name="set" id="set-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Cancel') ?></button>
+        </div>
+    </form>
+</div>

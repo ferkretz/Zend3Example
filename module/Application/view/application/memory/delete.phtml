@@ -1,0 +1,14 @@
+<?php
+$headTitle = $this->translate('Remove memory');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 memory" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <p><?= sprintf($this->translate('Are you sure that you want to remove memory "%s"?'), $memory->getName()) ?></p>
+    <form method="post" name="memory-form" id="memory-form">
+        <div class="form-group inline">
+            <button type="submit" name="delete" id="delete-yes" class="icon12 ok" value="Yes"><?= $this->translate('Yes') ?></button>
+            <button type="submit" name="delete" id="delete-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Cancel') ?></button>
+        </div>
+    </form>
+</div>

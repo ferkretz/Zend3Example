@@ -1,0 +1,28 @@
+<?php
+$headTitle = $this->translate('Add memory');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 computer" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <p><?= sprintf($this->translate('Choose a memory for "%s"!'), $computer->getName()) ?></p>
+    <form method="post" name="computer-form" id="computer-form">
+        <table>
+            <tr>
+                <th>&nbsp;</th>
+                <th><?= $this->translate('Name') ?></th>
+                <th><?= $this->translate('Description') ?></th>
+            </tr>
+            <?php foreach ($memories as $memory) : ?>
+                <tr>
+                    <td><input type="radio" name="memory-id" value="<?= $memory->getId() ?>"></td>
+                    <td><?= $this->escapeHtml($memory->getName()) ?></td>
+                    <td><?= $this->escapeHtml($memory->getDescription()) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+        <div class="form-group inline">
+            <button type="submit" name="set" id="set-ok" class="icon12 ok" value="Ok"><?= $this->translate('Ok') ?></button>
+            <button type="submit" name="set" id="set-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Cancel') ?></button>
+        </div>
+    </form>
+</div>

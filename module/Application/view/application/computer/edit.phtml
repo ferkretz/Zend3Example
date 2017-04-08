@@ -1,0 +1,93 @@
+<?php
+$headTitle = $this->translate('Edit computer');
+$this->headTitle($headTitle);
+$form = $this->form;
+$form->get('name')->setLabel($this->translate('Name'));
+$form->get('description')->setLabel($this->translate('Description'));
+$form->prepare();
+?>
+<center><div class="title icon48 computer" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <?= $this->form()->openTag($form) ?>
+    <div class="form-group w50">
+        <?= $this->formLabel($form->get('name')); ?>
+        <?= $this->formElement($form->get('name')); ?>
+        <?= $this->formElementErrors($form->get('name')); ?>
+    </div>
+    <div class="form-group w50">
+        <?= $this->formLabel($form->get('description')); ?>
+        <?= $this->formElement($form->get('description')); ?>
+        <?= $this->formElementErrors($form->get('description')); ?>
+    </div>
+    <div class="form-group w50">
+        <?= $this->formLabel($form->get('dimm')); ?>
+        <?= $this->formElement($form->get('dimm')); ?>
+        <?= $this->formElementErrors($form->get('dimm')); ?>
+    </div>
+    <div class="form-group inline">
+        <button type="submit" name="edit" id="edit-ok" class="icon12 ok" value="Ok"><?= $this->translate('Update') ?></button>
+        <button type="submit" name="edit" id="edit-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Return to computers') ?></button>
+    </div>
+    <?= $this->form()->closeTag(); ?>
+    <h2><?= $this->translate('The processor of this computer') ?></h2>
+    <?php if ($computer->getProcessor() == null) { ?>
+        <a class="icon12 new" href="<?=
+        $this->url(
+                'computer', ['action' => 'processor', 'id' => $computer->getId(), 'sub_action' => 'set']
+        )
+        ?>"><?= $this->translate('Add processor') ?></a>
+       <?php } ?>
+    <table>
+        <tr>
+            <th><?= $this->translate('Name') ?></th>
+            <th><?= $this->translate('Description') ?></th>
+            <th>&nbsp;</th>
+        </tr>
+        <?php if ($computer->getProcessor() != null) { ?>
+            <tr>
+                <td><?= $this->escapeHtml($computer->getProcessor()->getName()) ?></td>
+                <td><?= $this->escapeHtml($computer->getProcessor()->getDescription()) ?></td>
+                <td>
+                    <a class="icon12 edit cell" href="<?=
+                    $this->url(
+                            'computer', ['action' => 'processor', 'id' => $computer->getId(), 'sub_action' => 'set']
+                    )
+                    ?>"><?= $this->translate('Change') ?></a>
+                    <a class="icon12 remove cell" href="<?=
+                    $this->url(
+                            'computer', ['action' => 'processor', 'id' => $computer->getId(), 'sub_action' => 'delete']
+                    )
+                    ?>"><?= $this->translate('Remove') ?></a>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+    <h2><?= $this->translate('The memories of this computer') ?></h2>
+    <a class="icon12 new" href="<?=
+    $this->url(
+            'computer', ['action' => 'memory', 'id' => $computer->getId(), 'sub_action' => 'add']
+    )
+    ?>"><?= $this->translate('Add memory') ?></a>
+    <table>
+        <tr>
+            <th><?= $this->translate('DIMM') ?></th>
+            <th><?= $this->translate('Name') ?></th>
+            <th><?= $this->translate('Description') ?></th>
+            <th>&nbsp;</th>
+        </tr>
+        <?php foreach ($computer->getMemories() as $memory) : ?>
+            <tr>
+                <td><?= $this->escapeHtml($memory->getDIMM()) ?></td>
+                <td><?= $this->escapeHtml($memory->getName()) ?></td>
+                <td><?= $this->escapeHtml($memory->getDescription()) ?></td>
+                <td>
+                    <a class="icon12 remove cell" href="<?=
+                       $this->url(
+                               'computer', ['action' => 'memory', 'id' => $computer->getId(), 'sub_action' => 'delete', 'sub_id' => $memory->getId()]
+                       )
+                       ?>"><?= $this->translate('Remove') ?></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

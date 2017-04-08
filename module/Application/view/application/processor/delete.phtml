@@ -1,0 +1,14 @@
+<?php
+$headTitle = $this->translate('Remove processor');
+$this->headTitle($headTitle);
+?>
+<center><div class="title icon48 processor" ><?= $this->escapeHtml($headTitle); ?></div></center>
+<div class="content">
+    <p><?= sprintf($this->translate('Are you sure that you want to remove processor "%s"?'), $processor->getName()) ?></p>
+    <form method="post" name="processor-form" id="processor-form">
+        <div class="form-group inline">
+            <button type="submit" name="delete" id="delete-yes" class="icon12 ok" value="Yes"><?= $this->translate('Yes') ?></button>
+            <button type="submit" name="delete" id="delete-cancel" class="icon12 cancel" value="Cancel"><?= $this->translate('Cancel') ?></button>
+        </div>
+    </form>
+</div>

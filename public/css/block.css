@@ -1,0 +1,148 @@
+.container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: 760px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+        width: 900px;
+    }
+}
+
+.container.topborder {
+    display: block;
+    margin-top: 28px;
+    background-color: #F3F5F9;
+    box-shadow: 3px 3px 3px #aaa;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: #555;
+}
+
+aside, article {
+    display: table-cell;
+    vertical-align: top;
+    padding: 1em;
+}
+
+aside {
+    min-width: 160px;
+    width: 160px;
+    border-right: 1px solid #aaa;
+}
+
+article {
+    width: 100%;
+}
+
+article .title {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+footer {
+    display: block;
+    padding: 1em;
+    border-top: 1px solid #aaa;
+}
+
+.content {
+    width: 100%;
+    display: inline-block;
+}
+
+.icon48 {
+    display: inline-block;
+    height: 48px;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    padding-left: 52px;
+    padding-right: 2px;
+    font-size: 28px;
+    line-height: 48px;
+    border: 1px solid transparent;
+}
+.icon48.processor {background-image: url(../img/48/processor.png)}
+.icon48.memory {background-image: url(../img/48/memory.png)}
+.icon48.computer {background-image: url(../img/48/computer.png)}
+.icon48.error {background-image: url(../img/48/error.png)}
+a.icon48:hover {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.noicon12 {
+    display: inline-block;
+    outline: none;
+    height: 14px;
+    vertical-align: middle;
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 14px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.icon12 {
+    display: inline-block;
+    outline: none;
+    height: 14px;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    padding-left: 16px;
+    padding-right: 2px;
+    line-height: 14px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.icon12.ok,
+.icon12.yes {
+    background-image: url(../img/12/ok.png)
+}
+.icon12.no,
+.icon12.cancel {
+    background-image: url(../img/12/no.png)
+}
+.icon12.add,
+.icon12.new {
+    background-image: url(../img/12/add.png)
+}
+.icon12.remove,
+.icon12.delete {
+    background-image: url(../img/12/remove.png)
+}
+.icon12.edit,
+.icon12.preview {
+    background-image: url(../img/12/edit.png)
+}
+a.icon12:hover {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.w50 {
+    width: 50%;
+}
+
+

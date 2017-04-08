@@ -1,0 +1,102 @@
+.navbar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #ccc;
+    background: #477093;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #375A77), color-stop(18%, #477093));
+    background-image: -webkit-linear-gradient(bottom, #375A77 0, #477093 5px);
+    background-image:    -moz-linear-gradient(bottom, #375A77 0, #477093 5px);
+    background-image:      -o-linear-gradient(bottom, #375A77 0, #477093 5px);
+    background-image: linear-gradient(to top, #375A77 0, #477093 5px);
+    box-shadow: 0px 3px 3px #aaa;
+}
+
+.navbar * {
+    margin: 0;
+    padding: 0;
+    position: static;
+    text-transform: none;
+    text-decoration: none;
+    font: normal 13px sans-serif;
+    color: #ccc;
+    text-shadow: #444 0px -1px 1px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing:    content-box;
+    box-sizing:         content-box;
+}
+
+.nabbar .container {
+    width: 100%;
+}
+
+.navbar ul {
+}
+
+.nabbar ul,
+.navbar ul li {
+    float: left;
+    background: none;
+    clear: none;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    text-indent: 0;
+    z-index: 99999;
+}
+
+.navbar li a {
+    height: 28px;
+    padding: 0 12px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid #385c75;
+    border-left: 1px solid #558bb1;
+}
+
+.navbar li li {
+    float: none;
+    padding: 0;
+    margin: 2px;
+}
+
+.navbar li li a {
+    border: none;
+}
+
+.navbar ul ul {
+    display: none;
+    position: absolute;
+    float: none;
+    background-color: #f3f5f9;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+    border-bottom: 1px solid #555;
+    box-shadow: 3px 3px 3px #aaa;
+}
+
+.navbar ul li:hover {
+    background-color: #e4e9f2;
+}
+
+.navbar ul li:hover a {
+    color: #444;
+    text-shadow: 0px 1px 1px #ccc;
+    box-shadow: 0px 1px 1px 0px #333 inset;
+}
+
+.navbar ul li:hover ul li a {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+}
