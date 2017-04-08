@@ -6,6 +6,9 @@ Keywords:
 - MySQL (ORM, repository, entity)
 - Form validation (with localization)
 - Localization (po/mo)
+- HTML 5 sections
+- Menubar
+- Interactive JQuery Canvas clock
 
 To install ComputerTest schema (something like this):
 ```bash
